@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "413950885018",
+    "project_id": "hot-fut-eeabc",
+    "storage_bucket": "hot-fut-eeabc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413950885018:android:cb02a94dbde9fee6313323",
+        "android_client_info": {
+          "package_name": "com.mobile_auth.my_github"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413950885018-b9ghiv1kb2tig0akhm9g4ukd5e3fnocs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASjhGgjrHraw2WuGNpmRQ5c8bjeq4ATJk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413950885018-b9ghiv1kb2tig0akhm9g4ukd5e3fnocs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

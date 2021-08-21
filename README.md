@@ -1,3 +1,3 @@
 # HotFut
 Apk Link:
-https://drive.google.com/file/d/1zVTscI6XT9V8JN1GcYQRTG0gQP6LNgrX/view?usp=sharing
+https://drive.google.com/file/d/1UYWfV5OkweiZ4JUdOckQ0NDWOC1Otlwl/view?usp=sharing

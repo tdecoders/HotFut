@@ -10,6 +10,12 @@
 @import cloud_firestore;
 #endif
 
+#if __has_include(<contacts_service/ContactsServicePlugin.h>)
+#import <contacts_service/ContactsServicePlugin.h>
+#else
+@import contacts_service;
+#endif
+
 #if __has_include(<firebase_auth/FLTFirebaseAuthPlugin.h>)
 #import <firebase_auth/FLTFirebaseAuthPlugin.h>
 #else
@@ -28,6 +34,12 @@
 @import path_provider;
 #endif
 
+#if __has_include(<permission_handler/PermissionHandlerPlugin.h>)
+#import <permission_handler/PermissionHandlerPlugin.h>
+#else
+@import permission_handler;
+#endif
+
 #if __has_include(<shared_preferences/FLTSharedPreferencesPlugin.h>)
 #import <shared_preferences/FLTSharedPreferencesPlugin.h>
 #else
@@ -38,9 +50,11 @@
 
 + (void)registerWithRegistry:(NSObject<FlutterPluginRegistry>*)registry {
   [FLTFirebaseFirestorePlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTFirebaseFirestorePlugin"]];
+  [ContactsServicePlugin registerWithRegistrar:[registry registrarForPlugin:@"ContactsServicePlugin"]];
   [FLTFirebaseAuthPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTFirebaseAuthPlugin"]];
   [FLTFirebaseCorePlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTFirebaseCorePlugin"]];
   [FLTPathProviderPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTPathProviderPlugin"]];
+  [PermissionHandlerPlugin registerWithRegistrar:[registry registrarForPlugin:@"PermissionHandlerPlugin"]];
   [FLTSharedPreferencesPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTSharedPreferencesPlugin"]];
 }
 

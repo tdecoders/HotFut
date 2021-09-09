@@ -1,4 +1,4 @@
-import 'dart:async';
+import 'dart:math';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -6,12 +6,16 @@ import 'package:get/get.dart';
 import 'package:my_github/otpVerify.dart';
 import 'package:my_github/views/home.dart';
 import 'package:my_github/views/otp_screen.dart';
-import 'package:flutter/material.dart';
-import 'package:my_github/widgets/dialog.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PhoneController extends GetxController {
   PhoneController(this.firstName, this.lastName);
+
+  static const _chars = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890';
+  Random _rnd = Random();
+
+  String getRandomString(int length) =>
+      String.fromCharCodes(Iterable.generate(length, (_) => _chars.codeUnitAt(_rnd.nextInt(_chars.length))));
 
   FirebaseAuth auth = FirebaseAuth.instance;
 
@@ -68,22 +72,30 @@ class PhoneController extends GetxController {
     );
   }
 
-  myCredentials(
-      String verId, String input, String mobileNumber, bool flag) async {
-    AuthCredential authCredential =
-        PhoneAuthProvider.credential(verificationId: verId, smsCode: input);
+  myCredentials(String verId, String input, String mobileNumber, bool flag) async {
+    AuthCredential authCredential = PhoneAuthProvider.credential(verificationId: verId, smsCode: input);
     // ignore: non_constant_identifier_names
     auth.signInWithCredential(authCredential).then((UserCredential) async {
+      void solve12() {}
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      final CollectionReference userCollection = FirebaseFirestore.instance.collection('USERS');
       //If Success Move to Home Page
       if (flag) {
-        print(firstName);
-        print(lastName);
-        FirebaseFirestore.instance.collection('USERS').add(
-            {'fname': firstName, 'lname': lastName, 'mobile': mobileNumber});
+        DocumentReference userDocRef = await userCollection.add({
+          'fname': firstName,
+          'lname': lastName,
+          'mobile': mobileNumber,
+          'groups': [],
+        });
+
+        await userDocRef.update({'username': userDocRef.id});
+
+        await prefs.setString("documentid", userDocRef.id.toString());
+        await prefs.setString("firstname", firstName);
+        await prefs.setString("lastname", lastName);
       } else {
         print('Trying to login');
       }
-      SharedPreferences prefs = await SharedPreferences.getInstance();
       prefs.setString('loggedIn', 'true');
       loading.value = true;
       mobile.value = mobileNumber;

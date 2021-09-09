@@ -4,9 +4,9 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_github/utils/colors.dart';
 import 'package:my_github/utils/size_config.dart';
+import 'package:my_github/views/home.dart';
 import 'package:my_github/views/welcomeScreen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:my_github/views/home.dart';
 
 bool isLogin = false;
 Future<void> getNextScreen() async {
@@ -21,8 +21,9 @@ Future<void> getNextScreen() async {
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await getNextScreen();
   await Firebase.initializeApp();
-  getNextScreen();
+
   runApp(MyApp());
 }
 
@@ -40,12 +41,11 @@ class MyApp extends StatelessWidget {
             // textSelectionTheme: TextSelectionThemeData(
             //   cursorColor: Color(0xfff7ee00),
             // ),
-            textTheme: GoogleFonts.rubikTextTheme(Theme.of(context).textTheme)
-                .copyWith(
-                    bodyText1: GoogleFonts.rubik(fontWeight: FontWeight.w500),
-                    bodyText2: GoogleFonts.rubik(fontWeight: FontWeight.w400),
-                    headline1: GoogleFonts.rubik(fontWeight: FontWeight.normal),
-                    headline2: GoogleFonts.rubik(fontWeight: FontWeight.w300)),
+            textTheme: GoogleFonts.rubikTextTheme(Theme.of(context).textTheme).copyWith(
+                bodyText1: GoogleFonts.rubik(fontWeight: FontWeight.w500),
+                bodyText2: GoogleFonts.rubik(fontWeight: FontWeight.w400),
+                headline1: GoogleFonts.rubik(fontWeight: FontWeight.normal),
+                headline2: GoogleFonts.rubik(fontWeight: FontWeight.w300)),
             elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(
                 primary: AppColor.appBlue,

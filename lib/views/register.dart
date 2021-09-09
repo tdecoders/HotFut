@@ -44,11 +44,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     return controller.loading == true
                         ? Loader.dualRingLoader(AppColor.primaryColor)
                         : Container(
-                            height: SizeConfig.screenHeight -
-                                MediaQuery.of(context).padding.top,
+                            height: SizeConfig.screenHeight - MediaQuery.of(context).padding.top,
                             width: SizeConfig.screenWidth,
-                            padding: EdgeInsets.symmetric(
-                                horizontal: SizeConfig.widthMultiplier * 15),
+                            padding: EdgeInsets.symmetric(horizontal: SizeConfig.widthMultiplier * 15),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -74,41 +72,31 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   ),
                                   decoration: InputDecoration(
                                     border: OutlineInputBorder(
-                                      borderSide:
-                                          BorderSide(color: AppColor.appBlue),
+                                      borderSide: BorderSide(color: AppColor.appBlue),
                                     ),
                                     disabledBorder: OutlineInputBorder(
-                                      borderSide:
-                                          BorderSide(color: AppColor.appBlue),
+                                      borderSide: BorderSide(color: AppColor.appBlue),
                                     ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color: AppColor.primaryColor),
+                                      borderSide: BorderSide(color: AppColor.primaryColor),
                                     ),
                                     errorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color: AppColor.secondaryColor),
+                                      borderSide: BorderSide(color: AppColor.secondaryColor),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide:
-                                          BorderSide(color: AppColor.appBlue),
+                                      borderSide: BorderSide(color: AppColor.appBlue),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color: AppColor.secondaryColor),
+                                      borderSide: BorderSide(color: AppColor.secondaryColor),
                                     ),
                                     hintText: 'Enter First Name',
-                                    prefixStyle:
-                                        Get.textTheme.bodyText2!.copyWith(
-                                      color:
-                                          AppColor.blackColor.withOpacity(0.5),
+                                    prefixStyle: Get.textTheme.bodyText2!.copyWith(
+                                      color: AppColor.blackColor.withOpacity(0.5),
                                       fontSize: SizeConfig.textMultiplier * 1.5,
                                       // height: Get.height * 0.036,
                                     ),
-                                    hintStyle:
-                                        Get.textTheme.bodyText2!.copyWith(
-                                      color:
-                                          AppColor.blackColor.withOpacity(0.5),
+                                    hintStyle: Get.textTheme.bodyText2!.copyWith(
+                                      color: AppColor.blackColor.withOpacity(0.5),
                                       fontSize: SizeConfig.textMultiplier * 1.5,
                                       // height: Get.height * 0.036,
                                     ),
@@ -138,41 +126,31 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   ),
                                   decoration: InputDecoration(
                                     border: OutlineInputBorder(
-                                      borderSide:
-                                          BorderSide(color: AppColor.appBlue),
+                                      borderSide: BorderSide(color: AppColor.appBlue),
                                     ),
                                     disabledBorder: OutlineInputBorder(
-                                      borderSide:
-                                          BorderSide(color: AppColor.appBlue),
+                                      borderSide: BorderSide(color: AppColor.appBlue),
                                     ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color: AppColor.primaryColor),
+                                      borderSide: BorderSide(color: AppColor.primaryColor),
                                     ),
                                     errorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color: AppColor.secondaryColor),
+                                      borderSide: BorderSide(color: AppColor.secondaryColor),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide:
-                                          BorderSide(color: AppColor.appBlue),
+                                      borderSide: BorderSide(color: AppColor.appBlue),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color: AppColor.secondaryColor),
+                                      borderSide: BorderSide(color: AppColor.secondaryColor),
                                     ),
                                     hintText: 'Enter Last Name',
-                                    prefixStyle:
-                                        Get.textTheme.bodyText2!.copyWith(
-                                      color:
-                                          AppColor.blackColor.withOpacity(0.5),
+                                    prefixStyle: Get.textTheme.bodyText2!.copyWith(
+                                      color: AppColor.blackColor.withOpacity(0.5),
                                       fontSize: SizeConfig.textMultiplier * 1.5,
                                       // height: Get.height * 0.036,
                                     ),
-                                    hintStyle:
-                                        Get.textTheme.bodyText2!.copyWith(
-                                      color:
-                                          AppColor.blackColor.withOpacity(0.5),
+                                    hintStyle: Get.textTheme.bodyText2!.copyWith(
+                                      color: AppColor.blackColor.withOpacity(0.5),
                                       fontSize: SizeConfig.textMultiplier * 1.5,
                                       // height: Get.height * 0.036,
                                     ),
@@ -202,42 +180,32 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   ),
                                   decoration: InputDecoration(
                                     border: OutlineInputBorder(
-                                      borderSide:
-                                          BorderSide(color: AppColor.appBlue),
+                                      borderSide: BorderSide(color: AppColor.appBlue),
                                     ),
                                     disabledBorder: OutlineInputBorder(
-                                      borderSide:
-                                          BorderSide(color: AppColor.appBlue),
+                                      borderSide: BorderSide(color: AppColor.appBlue),
                                     ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color: AppColor.primaryColor),
+                                      borderSide: BorderSide(color: AppColor.primaryColor),
                                     ),
                                     errorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color: AppColor.secondaryColor),
+                                      borderSide: BorderSide(color: AppColor.secondaryColor),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide:
-                                          BorderSide(color: AppColor.appBlue),
+                                      borderSide: BorderSide(color: AppColor.appBlue),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color: AppColor.secondaryColor),
+                                      borderSide: BorderSide(color: AppColor.secondaryColor),
                                     ),
                                     hintText: 'Mobile Number',
                                     prefixText: '+91-',
-                                    prefixStyle:
-                                        Get.textTheme.bodyText2!.copyWith(
-                                      color:
-                                          AppColor.blackColor.withOpacity(0.5),
+                                    prefixStyle: Get.textTheme.bodyText2!.copyWith(
+                                      color: AppColor.blackColor.withOpacity(0.5),
                                       fontSize: SizeConfig.textMultiplier * 1.5,
                                       // height: Get.height * 0.036,
                                     ),
-                                    hintStyle:
-                                        Get.textTheme.bodyText2!.copyWith(
-                                      color:
-                                          AppColor.blackColor.withOpacity(0.5),
+                                    hintStyle: Get.textTheme.bodyText2!.copyWith(
+                                      color: AppColor.blackColor.withOpacity(0.5),
                                       fontSize: SizeConfig.textMultiplier * 1.5,
                                       // height: Get.height * 0.036,
                                     ),
@@ -251,81 +219,46 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   children: [
                                     InkWell(
                                       onTap: () async {
-                                        if (_firstnameController.text.length ==
-                                            0) {
-                                          DialogWidget.errorDialog(
-                                              context,
-                                              'Enter a valid First Name',
-                                              () {});
-                                        } else if (_lastnameController
-                                                .text.length ==
-                                            0) {
-                                          DialogWidget.errorDialog(context,
-                                              'Enter a valid Last Name', () {});
-                                        } else if (_mobileController
-                                                .text.length ==
-                                            10) {
+                                        if (_firstnameController.text.length == 0) {
+                                          DialogWidget.errorDialog(context, 'Enter a valid First Name', () {});
+                                        } else if (_lastnameController.text.length == 0) {
+                                          DialogWidget.errorDialog(context, 'Enter a valid Last Name', () {});
+                                        } else if (_mobileController.text.length == 10) {
                                           bool f = false;
-
-                                          await _firestore
-                                              .collection("USERS")
-                                              .get()
-                                              .then((querySnapshot) {
-                                            querySnapshot.docs
-                                                .forEach((result) {
-                                              if (result
-                                                      .data()["mobile"]
-                                                      .toString() ==
-                                                  _mobileController.text
-                                                      .toString()) {
+                                          await _firestore.collection("USERS").get().then((querySnapshot) {
+                                            querySnapshot.docs.forEach((result) {
+                                              if (result.data()["mobile"].toString() == _mobileController.text.toString()) {
                                                 f = true;
                                               }
                                             });
                                             if (f == true) {
-                                              DialogWidget.errorDialog(
-                                                  context,
-                                                  "Account already Exists!",
-                                                  () {});
+                                              DialogWidget.errorDialog(context, "Account already Exists!", () {});
                                             } else {
-                                              pController.lastName =
-                                                  _lastnameController.text;
-                                              pController.firstName =
-                                                  _firstnameController.text;
+                                              pController.lastName = _lastnameController.text.trim();
+                                              pController.firstName = _firstnameController.text.trim();
                                               controller.signInWithPhone(
-                                                phoneNumber:
-                                                    _mobileController.text,
+                                                phoneNumber: _mobileController.text,
                                               );
                                             }
                                           });
                                         } else {
-                                          DialogWidget.errorDialog(
-                                              context,
-                                              'Enter a valid mobile number',
-                                              () {});
+                                          DialogWidget.errorDialog(context, 'Enter a valid mobile number', () {});
                                         }
                                       },
                                       child: Container(
                                         // width: SizeConfig.widthMultiplier * 20,
                                         padding: EdgeInsets.symmetric(
-                                            horizontal:
-                                                SizeConfig.widthMultiplier * 8,
-                                            vertical:
-                                                SizeConfig.heightMultiplier *
-                                                    1.25),
-                                        decoration: BoxDecoration(
-                                            color: AppColor.appBlue,
-                                            borderRadius:
-                                                BorderRadius.circular(5)),
+                                            horizontal: SizeConfig.widthMultiplier * 8,
+                                            vertical: SizeConfig.heightMultiplier * 1.25),
+                                        decoration:
+                                            BoxDecoration(color: AppColor.appBlue, borderRadius: BorderRadius.circular(5)),
                                         // ignore: deprecated_member_use
                                         child: Center(
                                           child: Text(
                                             'Continue',
-                                            style: Get.textTheme.bodyText2!
-                                                .copyWith(
+                                            style: Get.textTheme.bodyText2!.copyWith(
                                               color: Colors.white,
-                                              fontSize:
-                                                  SizeConfig.textMultiplier *
-                                                      1.5,
+                                              fontSize: SizeConfig.textMultiplier * 1.5,
                                               // height: Get.height * 0.036,
                                             ),
                                           ),

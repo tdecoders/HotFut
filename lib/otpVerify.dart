@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_github/widgets/dialog.dart';
 
 class otpVerify extends StatefulWidget {
   @override
